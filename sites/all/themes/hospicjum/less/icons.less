@@ -1,0 +1,54 @@
+.phone,
+.ext,
+a.icon[href $= '.pdf'],
+a.icon[href $= '.zip'],
+a[href $= '.doc'],
+a.icon[href $= '.jpg'],
+a.icon[href $= '.gif'],
+a[href^='mailto:'],	{
+	background: url('../img/icons/email.png') no-repeat 3px 50% transparent;
+	padding: 1px 0 1px 25px;
+	text-align: left;
+}
+
+.phone {
+	background-image: url('../img/icons/cellphone.png');
+	white-space: nowrap;
+}
+
+.ext {
+	background: url('../img/icons/external.png') no-repeat 100% -3px transparent;
+	padding: 1px 20px 1px 0;
+	.transition;
+	
+	&:hover {
+		background-position: 100% -5px;
+	}
+}
+
+a.icon[href $= '.pdf'] {
+	background-image: url('../img/icons/pdf.png');
+}
+
+a.icon[href $= '.zip'] {
+	background-image: url('../img/icons/download.png');
+}
+
+a[href $= '.doc'] {
+	background-image: url('../img/icons/doc.png');
+}
+
+a.icon[href $= '.jpg'],
+a.icon[href $= '.gif'] {
+	background-image: url('../img/icons/img.png');
+}
+
+figure.thumbnail a {
+	background: none;
+	padding: 0;
+}
+
+.spamspan {
+	float: none;
+	margin: 0;
+}

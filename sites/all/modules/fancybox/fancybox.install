@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Installation settings for Fancybox module.
+ */
+
+/**
+ * Implements hook_install()
+ */
+function fancybox_install() {
+  variable_set('fancybox_settings', _fancybox_defaults());
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function fancybox_uninstall() {
+  variable_del('fancybox_settings');
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function fancybox_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  if ($phase == 'install') {
+    if (module_exists('libraries') && !function_exists('libraries_detect')) {
+      $requirements['libraries'] = array(
+        'title' => $t('Incorrect Libraries API version'),
+        'description' => $t('fancyBox 7.x-2.x requires Libaries API 7.x-2.0 or higher.'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+
+  return $requirements;
+}

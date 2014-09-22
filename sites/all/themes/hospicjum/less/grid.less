@@ -1,0 +1,61 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Fixed (940px)
+#grid > .core(@gridColumnWidth, @gridGutterWidth);
+
+// Fluid (940px)
+#grid > .fluid(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+// Reset utility classes due to specificity
+[class*="span"].hide,
+.row-fluid [class*="span"].hide {
+  display: none;
+}
+
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+
+article .row {
+	margin-right: -20px;
+	
+	&.centered {
+		text-align: center;
+		
+		p {
+			text-align: center;
+		}
+	}
+}
+
+.faux-columns {
+	.clearfix;
+	
+	.left {
+		width: 481px;
+		float: left;
+		padding-right: 19px;
+		background: url('../img/spacer.png') repeat-y 100% 0 transparent;
+	}
+	
+	.right {
+		width: 281px;
+		float: left;
+		padding-left: 20px;
+		margin-left: -1px;
+		background: url('../img/spacer.png') repeat-y 0 0 transparent;
+		
+		.jp-gui.jp-interface.open .jp-progress {
+			width: 200px;
+		}
+	}
+	
+	&.wider {
+		.left	{ width: 520px; }
+		.right	{ width: 240px; }
+	}
+}

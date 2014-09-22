@@ -1,0 +1,16 @@
+name = whdd theme
+description = whhd theme by marek fijas
+core = 7.x
+engine = phptemplate
+
+regions[content] = Content
+regions[menu] = Main menu
+regions[submenu] = Submenu
+regions[sidebar] = Sidebar
+regions[footer] = Footer
+regions[admin-tools] = Admin tools
+
+stylesheets[all][] = css/system.base.css
+stylesheets[all][] = less/style.less
+
+scripts[] = js/bootstrap.min.js

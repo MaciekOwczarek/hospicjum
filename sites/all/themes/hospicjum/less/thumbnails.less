@@ -1,0 +1,109 @@
+//
+// Thumbnails and figure
+// --------------------------------------------------
+
+figure {
+	margin: 0 40px 40px 0;
+	float: left;
+}
+
+// Note: `.thumbnails` and `.thumbnails > li` are overriden in responsive files
+
+// Make wrapper ul behave like the grid
+.thumbnails {
+  margin-left: -@gridGutterWidth;
+  list-style: none;
+  .clearfix();
+}
+// Fluid rows have no left margin
+.row-fluid .thumbnails {
+  margin-left: 0;
+}
+
+// Float li to make thumbnails appear in a row
+.thumbnails > li {
+  float: left; // Explicity set the float since we don't require .span* classes
+  margin-bottom: @baseLineHeight;
+  margin-left: @gridGutterWidth;
+}
+
+// The actual thumbnail (can be `a` or `div`)
+.thumbnail {
+	display: block;
+	padding: 4px;
+	line-height: @baseLineHeight;
+	border: 1px solid #ddd;
+	.border-radius(@baseBorderRadius);
+	.box-shadow(0 1px 3px rgba(0,0,0,.055));
+	.transition(all .2s ease-in-out);
+	text-align: center;
+	
+	&.inline {
+		display: inline-block;
+		margin: 0 20px 20px 0;
+		float: left;
+	}
+	
+	&.center {
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+.center .thumbnail {
+	display: inline-block;
+	margin: 20px;
+}
+
+.thumbnail-hover() {
+	border-color: @linkColor;
+	.box-shadow(0 1px 4px rgba(0,105,214,.25));
+}
+// Add a hover state for linked versions only
+//figure.thumbnail,
+a.thumbnail {
+	&:hover {
+		.thumbnail-hover;
+	}
+}
+
+// Images and captions
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnail figcaption,
+.thumbnail .caption {
+  padding: 5px 5px 0;
+  color: @gray;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.thumbs {
+	margin: 0 -20px;
+	.clearfix;
+	
+	> a, .node {
+		float: left;
+		margin: 20px;
+	}
+	
+	figure {
+		margin: 20px;
+	}
+	
+	&.promyki-nadziei {
+		margin: 0 -13px;
+		
+		.node { margin: 13px }
+	}
+	
+	&.mini {
+		margin: 0 -10px;
+		
+		a { margin: 10px; }
+	}
+}

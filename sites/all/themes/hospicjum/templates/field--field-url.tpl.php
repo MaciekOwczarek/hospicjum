@@ -1,0 +1,1 @@
+<?php render($items[0]); ?>
