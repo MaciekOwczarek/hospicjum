@@ -565,3 +565,36 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+
+//error_reporting(E_ALL & ~(E_STRICT|E_NOTICE|E_WARNING));
+
+
+/**
+ * Drupal for Facebook settings.
+ */
+
+if (!is_array($conf))
+  $conf = array();
+
+$conf['fb_verbose'] = TRUE; // debug output
+//$conf['fb_verbose'] = 'extreme'; // for verbosity fetishists.
+
+// More efficient connect session discovery.
+// Required if supporting one connect app and different canvas apps.
+//$conf['fb_id'] = '123.....XYZ'; // Your connect app's ID goes here.
+
+// Enable URL rewriting (for canvas page apps).
+include "sites/all/modules/fb/fb_url_rewrite.inc";
+include "sites/all/modules/fb/fb_settings.inc";
+
+$conf['fb_api_file'] = 'sites/all/libraries/facebook-php-sdk/src/facebook.php';
+
+// Header so that IE will accept cookies on canvas pages.
+if (!headers_sent()) {
+  header('P3P: CP="We do not have a P3P policy."');
+}
+
+// end of settings.php
+
+
