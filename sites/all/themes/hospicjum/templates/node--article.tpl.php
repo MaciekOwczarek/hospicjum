@@ -27,6 +27,7 @@
 		): ?>
 		<?php print render($content['links']); ?>
 	<?php endif; ?>
+	<fb:like href="<?php print $node_url; ?>"></fb:like>
 </article>
 
 <script>
