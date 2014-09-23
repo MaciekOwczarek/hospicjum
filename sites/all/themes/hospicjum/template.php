@@ -92,6 +92,7 @@ function hospicjum_js_alter(&$js) {
 		// Finally remove the original jQuery
 		unset($js['misc/jquery.js']);
 	}
+        drupal_add_js(drupal_get_path('theme', variable_get('theme_default', NULL)) . '/js/topmenu.js');
 }
 
 /**

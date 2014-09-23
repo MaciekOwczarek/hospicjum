@@ -9,6 +9,9 @@ regions[submenu] = Submenu
 regions[sidebar] = Sidebar
 regions[footer] = Footer
 regions[admin-tools] = Admin tools
+regions[header-green-bar] = Header green bar
+regions[header-menu] = Header menu
+regions[header-description] = Header description
 
 stylesheets[all][] = css/system.base.css
 stylesheets[all][] = less/style.less

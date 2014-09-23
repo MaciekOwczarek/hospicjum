@@ -1,9 +1,20 @@
 <?php print render($page['admin-tools']); ?>
-<div class="container">
+<div class="container header-container">
 	<div id="header-wrapper">
 		<header>
+                        <?php print render($page['header-green-bar']); ?>
 			<a href="<?php print $base_path;?>" id="logo"></a>
-			<div id="girl"></div>
+                        <nav id="top-menu">
+                            <?php print render($page['header-menu']); ?>
+                            <?php 
+                                /*$menu = menu_tree('menu-top-menu');
+                                $menuhtml = drupal_render($menu);
+                                print $menuhtml;*/
+                            ?>
+                        </nav>
+                        <section id="intro-text">
+                            <?php print render($page['header-description']); ?>
+                        </section>
 		</header>
 	</div>
 </div>
@@ -18,7 +29,7 @@
 		
 		<div class="span12">
 		<?php if($page['submenu']): ?>
-			<div id="submenu"><?php print render($page['submenu']); ?></div>
+			<div id="submenu"><?php //print render($page['submenu']); ?></div>
 		<?php endif; ?>	
 		
 		<?php if ($messages): ?>
@@ -44,6 +55,9 @@
 </div>
 
 <footer class="container">
+    <section>
+        <?php print render($page['footer']); ?>
+    </section>
 </footer>
 
 <script>
