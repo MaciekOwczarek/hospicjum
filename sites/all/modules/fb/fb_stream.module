@@ -59,6 +59,7 @@ function fb_stream_node_insert($node) {
   // Defer any contact with Facebook until later, after all node hooks have run.
   // Facebook will visit our URL to get any graph tags, but Drupal will not
   // properly return the page if insert is not complete.
+
   drupal_register_shutdown_function('fb_stream_post_on_shutdown',$node);
 }
 
@@ -77,8 +78,10 @@ function fb_stream_node_update($node) {
  * all node insert/update hooks have completed.
  */
 function fb_stream_post_on_shutdown($node) {
-  if (TRUE) { // Maintain same level of indentation as D6 branch, so that patches easily apply.
+    if (TRUE) { // Maintain same level of indentation as D6 branch, so that patches easily apply.
+
     if (!empty($node->fb_stream_do_post)) {
+      
       $node_url = url("node/$node->nid", array('absolute' => TRUE));
 
       $body = field_get_items('node', $node, 'body');
@@ -93,18 +96,19 @@ function fb_stream_post_on_shutdown($node) {
                                    'name' => t('View More'),
                                    'link' => $node_url,
                                  )),
-        'method' => 'POST',
+        'method' => 'GET',
       );
 
       // Let third parties alter params.
       $params = fb_invoke(FB_STREAM_OP_PRE_POST, array('node' => $node), $params, 'fb_stream');
+
       if ($params['name']) {
 
         // http://stackoverflow.com/questions/4652628/what-markup-is-allowed-in-the-description-of-a-facebook-feed-post
         $params['description'] = strip_tags($params['description'], '<b><i><small><center>');
 
         try {
-          $result = fb_graph($node->fb_stream_to . '/feed', $params, 'POST');
+          $result = fb_graph($node->fb_stream_to . '/feed', $params, 'GET');
           // ID returned to us is not a normal graph ID.  We can't query it, but can build a permalink.
           if ($result['id']) {
             $exploded_result = explode('_', $result['id']);
@@ -122,6 +126,7 @@ function fb_stream_post_on_shutdown($node) {
           $msg = t('Failed to post content to Facebook.');
           drupal_set_message($msg, 'warning');
           fb_log_exception($e, $msg);
+          file_put_contents('/tmp/drupal-fb-err.txt', $e);
         }
       }
       else {
@@ -144,7 +149,9 @@ function fb_stream_form_alter(&$form, &$form_state, $form_id) {
     fb_stream_node_settings_form($form);
   }
   elseif (!empty($form['#node_edit_form'])) {
+
     $type = $form['type']['#value'];
+
     // TODO: display a connect link for individual user even when token is not configured.
     if (variable_get('fb_stream_enabled__' . $type, FALSE) &&
         ($token = variable_get(FB_STREAM_VAR_TOKEN, NULL)) &&
@@ -234,6 +241,7 @@ function fb_stream_form_alter(&$form, &$form_state, $form_id) {
 
       }
       catch (Exception $e) {
+
         drupal_set_message(t('Post to facebook options not available.  Possibly a temporary failure to reach facebook.com, or an expired access token.'), 'warning');
         fb_log_exception($e, t('Failed to access facebook altering node-form.'));
       }

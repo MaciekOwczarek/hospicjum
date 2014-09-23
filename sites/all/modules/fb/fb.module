@@ -583,6 +583,11 @@ function fb_graph($path, $params = array(), $method = 'GET', $fb = NULL) {
     $url = url("https://graph.facebook.com/$path", array(
                  'query' => $params,
                ));
+         file_put_contents('/tmp/drupal-fb-query.txt', print_r(array(
+                                  'url'=>$url,
+                                  'method' => $method,
+                                  'data' => $params,
+                                ),true));
     $http = drupal_http_request($url);
   }
   else {
@@ -590,6 +595,7 @@ function fb_graph($path, $params = array(), $method = 'GET', $fb = NULL) {
     $headers = array();
     //$headers = array('Content-Type' => 'application/x-www-form-urlencoded'); // Needed??
     $query = http_build_query($params, '', '&');
+
     $http = drupal_http_request($url, array(
                                   'headers' => $headers,
                                   'method' => $method,
