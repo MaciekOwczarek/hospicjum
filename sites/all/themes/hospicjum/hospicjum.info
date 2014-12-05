@@ -17,3 +17,5 @@ stylesheets[all][] = css/system.base.css
 stylesheets[all][] = less/style.less
 
 scripts[] = js/bootstrap.min.js
+scripts[] = js/jquery-custom.js
+scripts[] = js/jquery.browser.min.js
