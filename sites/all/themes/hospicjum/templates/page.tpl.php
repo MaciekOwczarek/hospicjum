@@ -36,8 +36,15 @@
 		<div id="messages">
 			<?php print $messages; ?>
 		</div>
-		<?php endif; ?>	
-	
+		<?php endif; ?>
+
+
+        <?php if ($page['sidebarRight']): ?>
+            <div id="sidebarRight" class="span5">
+                <?php print render($page['sidebarRight']); ?>
+            </div>
+        <?php endif; ?>
+            
 		<?php if($page['sidebar']): ?>
 			<div class="span7">
 				<section><?php print render($page['content']); ?></section>
