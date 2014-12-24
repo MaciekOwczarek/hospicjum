@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db27946e-ac46-49f6-9d7a-1e2a62c8a1f5" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sites/all/themes/hospicjum/libraries/jquery.cycle/jquery.cycyle.all.js" afterPath="$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycyle.all.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycyle.all.js" afterPath="$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycle.all.js" />
     </list>
     <ignored path="hospicjum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,8 +103,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.cycyle.all.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycyle.all.js">
+      <file leaf-file-name="jquery.cycle.all.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycle.all.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.33760685" vertical-offset="22458" max-vertical-offset="23220">
               <caret line="1513" column="13" selection-start-line="1513" selection-start-column="13" selection-end-line="1513" selection-end-column="13" />
@@ -325,6 +325,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospicjum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospicjum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="all" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery.cycle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -508,7 +534,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycyle.all.js">
+    <entry file="file://$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycle.all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33760685" vertical-offset="22458" max-vertical-offset="23220">
           <caret line="1513" column="13" selection-start-line="1513" selection-start-column="13" selection-end-line="1513" selection-end-column="13" />
