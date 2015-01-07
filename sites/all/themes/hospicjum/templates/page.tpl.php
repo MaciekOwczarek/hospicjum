@@ -25,6 +25,9 @@
 			<nav id="main-menu">
 				<?php print render($page['menu']); ?>
 			</nav>
+            <?php if($page['sidebarLeft']): ?>
+                <?php print render($page['sidebarLeft']); ?>
+            <?php endif; ?>
 		</div>
 		
 		<div class="span12">
