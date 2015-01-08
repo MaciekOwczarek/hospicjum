@@ -17,6 +17,7 @@ regions[header-description] = Header description
 
 stylesheets[all][] = css/system.base.css
 stylesheets[all][] = less/style.less
+stylesheets[all][] = css/custom.css
 
 scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery-custom.js
