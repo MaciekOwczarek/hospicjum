@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db27946e-ac46-49f6-9d7a-1e2a62c8a1f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/hospicjum/hospicjum.info" afterPath="$PROJECT_DIR$/sites/all/themes/hospicjum/hospicjum.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css" afterPath="$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css" />
     </list>
     <ignored path="hospicjum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,21 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hospicjum.info" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hospicjum.info" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/hospicjum/hospicjum.info">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17706576" vertical-offset="0" max-vertical-offset="593">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -94,8 +94,8 @@
         <option value="$PROJECT_DIR$/sites/all/libraries/jquery.cycle/jquery.cycle.all.js" />
         <option value="$PROJECT_DIR$/sites/all/themes/hospicjum/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/hospicjum/css/system.base.css" />
-        <option value="$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/hospicjum/hospicjum.info" />
+        <option value="$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css" />
       </list>
     </option>
   </component>
@@ -708,18 +708,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/hospicjum/hospicjum.info">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/hospicjum/hospicjum.info">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/hospicjum/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17706576" vertical-offset="0" max-vertical-offset="593">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>
